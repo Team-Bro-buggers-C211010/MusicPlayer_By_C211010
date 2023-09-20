@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shovan Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="circle">
+              <i class="bi bi-chevron-left"></i>
+            </div>
+
+            <div class="circle dropdown">
+              <i
+                class="bi bi-music-note-list"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+              </i>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ul>
+                    <li>Din Te Raat</li>
+                    <li>Tum Mere</li>
+                    <li>Chaand Baaliyan</li>
+                    <li>Hok Kolorob</li>
+                    <li>Hariye Jao</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <img
+          src="Media/DinTeRaatImg.jpeg"
+          id="songImg"
+          class="song-img"
+          alt="Here Song image showed"
+        />
+        <h1 id="songTitle">Din Te Raat</h1>
+        <p id="Singer">Kkartik Malhotra ft. Fukra Insaan</p>
+
+        <audio id="song">
+          <source
+            src="Media/Din Te Raat Song Fukra Insaan, Kkartik Malhotra.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <input type="range" id="progress" value="0" />
+
+        <div class="controls icon-large">
+          <div>
+            <i class="bi bi-skip-backward-fill" onclick="playBackward()"></i>
+          </div>
+          <div onclick="playPause()">
+            <i class="bi bi-play-fill" id="ctrlIcon"></i>
+          </div>
+          <div>
+            <i class="bi bi-skip-forward-fill" onclick="playForward()"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
